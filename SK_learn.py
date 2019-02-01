@@ -168,3 +168,6 @@ clf.fit(xy_data,z_data)
 
 print(clf.predict([[3,3.01]]))
 print(clf.predict(np.array([[7,8.01]])))
+
+
+
