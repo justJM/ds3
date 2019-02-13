@@ -1,19 +1,22 @@
 #1
 #%%
 import numpy as np
-import scipy as stats
+from scipy import stats
+import numpy as np
+from scipy.stats import binom,norm,t
+# import scipy.stats as st
 
-samples = np.random.normal(size=500)
+# samples = np.random.normal(size=500)
 
-print(np.median(samples))
+# print(np.median(samples))
 
-print(np.std(samples))
+# print(np.std(samples))
 
-print(stats.scoreatpercentile(samples,80))
+# print(stats.scoreatpercentile(samples,80))
 
-loc,std= stats.norm.fit(samples)
-print(loc)
-print(std)
+# loc,std= stats.norm.fit(samples)
+# print(loc)
+# print(std)
 
 
 
@@ -62,11 +65,11 @@ print(std)
 # print(param)
 
 
-# #8 
-# import scipy as stats
-# class1=[65.9,53.6,57.3,59.3,63.8,59.2,64.2,75.0,62.9]
-# class2=[76.3,82.1,73.3,69.3,59.9,72.1,59.1,86.8,78.1]
+#8 
+import scipy as stats
+class1=[65.9,53.6,57.3,59.3,63.8,59.2,64.2,75.0,62.9]
+class2=[76.3,82.1,73.3,69.3,59.9,72.1,59.1,86.8,78.1]
 
-# result = stats.ttest_ind(class1,class2)
+result = stats.ttest_ind(class1,class2)
 
-# print('독립표본 t 검정 결과: %.4f, pvalue=%.3f'%(result))
+print('독립표본 t 검정 결과: %.4f, pvalue=%.3f'%(result))
